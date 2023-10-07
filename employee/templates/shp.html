@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Record</title>
+    {% load static %}
+    <link rel="stylesheet" href="..\static\css\table.css">
+    <!-- <link rel="stylesheet" href="..\static\css\style.css"> -->
+</head>
+
+<body>
+    <div class="itm">
+        <h1>PROVEEDORES</h1>
+        <img class="estar"  src = "{% static '/proveedor.png' %}" height="200" width="200" class="d-inline-block align-top">
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>codigo</th>
+                <th>proveedor</th>
+                <th>contacto telefonico</th>
+                <th>correo</th>
+                <th>editar</th>
+                <th>borrar</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for proveedores in proveedoress %}
+            <tr>
+                <td>{{ proveedores.id }}</td>
+                <td>{{ proveedores.codigo }}</td>
+                <td>{{ proveedores.proveedore }}</td>
+                <td>{{ proveedores.contacto_tel }}</td>
+                <td>{{ proveedores.correo }}</td>
+
+                <td>
+                    <a class="edit" href="/edit2/{{ proveedores.id }}">Editar</a>
+                </td>
+                <td><a class="delete" href="/delete2/{{ proveedores.id }}">Eliminar</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <br>
+    <div class="botones">
+        <div class="itm">
+        <button class="boton"><a href="/emp2">agregar un proveedor nuevo</a></button>
+        </div>
+        <div class="itm">
+        <button class="boton"><a href="/menu">volver al menu</a></button>
+        </div>
+    </div>
+    
+</body>
+
+
+</html>

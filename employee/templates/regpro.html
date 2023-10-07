@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '..\static\css\style.css'%}">
+    <link rel="stylesheet" href="{% static '..\static\css\form.css'%}">
+</head>
+
+<body>
+    <!-- <img src = "{% static '/R.jpg' %}" height="200" width="200" class="d-inline-block align-top"> -->
+    <form method="POST" action="/emp2">
+        {% csrf_token %}
+        <div>
+            <br>
+            <div class="formulario">
+                <div class="items">
+                    <p>id:</p>{{ form.id }}
+                </div>
+                <div>
+                    <p>codigo:</p>{{ form.codigo }}
+                </div>
+                <div class="items">
+                    <p>proveedor:</p>{{ form.proveedore }}
+                </div>
+                <div class="items">
+                    <p>contacto telefonico:</p>{{ form.contacto_tel }}
+                </div>
+                <div class="items">
+                    <p>correo:</p>{{ form.correo }}
+                </div>
+
+                <div class="items" >
+                    <br>
+                    <button class="boton" border-radius: 12px; type="submit">Submit</button>
+                    
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+}
+body{
+    margin: 0;
+    background-image: url('https://th.bing.com/th/id/R.a7bebe56b0026df256b2d8c4294b210d?rik=ME2uQi07IF%2b%2bVg&riu=http%3a%2f%2f1.bp.blogspot.com%2f-TGfXEqOy8mQ%2fTqxx-HGqr-I%2fAAAAAAAAAF0%2fGS-EPuGH4Jc%2fs1600%2fP1050841.JPG&ehk=jM%2fWb8HQpRlEYAEr0p2Ui%2bNg6HmPfhLEkRiq028eOac%3d&risl=&pid=ImgRaw&r=0');
+}
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+nav{
+    /* top: 8px; */
+    position: sticky;
+    /* max-width: 900px; */
+    /* margin: auto; */
+    background-color: #333;
+    font-size: 20px;
+    /* margin-top: 50px; */
+    display: flex;
+    justify-content: space-between;
+}
+.menu-hor{
+    gap: 0 7px;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+}
+.menu-hor >  li  > a{
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+.menu-hor > li:hover{
+    transition: 1s;
+    background-color: rgba(36, 35, 35, 0.418);
+}
+.menu-vert{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgba(0, 0, 0, .5);
+    margin-left: 5px;
+}
+.menu-hor li:hover .menu-vert{
+    display: block;
+}
+.menu-vert li:hover{
+    background-color: black;
+}
+.menu-vert li a{
+    font-size: 15px;
+    display: block;
+    color: white;
+    padding: 15px 15px 15px 20px;
+    text-decoration: none;
+}
+
+
+
+
+
+.todo{
+    justify-content: space-between;
+    display: flex;
+}
+.menn{
+    margin: 10px 10px 0 0;
+    display: flex;
+    /* justify-content: flex-end; */
+}
+.presentacion{
+    
+    display: flex
+}
+#m2{
+    background-color: #ffb48a; 
+}
+.ok{
+    width: 400px;
+    border-radius: 20px 50px;
+}
+
+#escudo{
+    width: 40px;
+    max-width: 100px;
+}
+.imagenes{
+    backdrop-filter: blur(5px);
+    border-bottom: solid black;
+    border-radius: 30px;
+    width: 400px;
+    height: 100px;
+    display: grid;
+    place-items: center;
+}
